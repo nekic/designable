@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from 'react'
-import { isFn } from '@designable/shared'
+import { isFn, globalThisPolyfill } from '@designable/shared'
 import {
   useDesigner,
   useWorkspace,
-  useRegistry,
-  useTheme,
+  useLayout,
   usePrefix,
 } from '@designable/react'
 import ReactDOM from 'react-dom'
@@ -21,8 +20,7 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
   const appCls = usePrefix('app')
   const designer = useDesigner()
   const workspace = useWorkspace()
-  const registry = useRegistry()
-  const theme = useTheme()
+  const layout = useLayout()
   const cssAssets = props.cssAssets || []
   const jsAssets = props.jsAssets || []
   const getCSSVar = (name: string) => {
@@ -42,12 +40,12 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
           return `<script src="${js}" type="text/javascript" ></script>`
         })
         .join('\n')
-      ref.current.contentWindow['__DESINGER_SANDBOX_SCOPE__'] = props.scope
-      ref.current.contentWindow['__DESINGER_THEME__'] = theme
-      ref.current.contentWindow['__DESINGER_ENGINE__'] = designer
-      ref.current.contentWindow['__DESINGER_WORKSPACE__'] = workspace
-      ref.current.contentWindow['__DESIGNER_REGISTRY__'] = registry
-      ref.current.contentWindow['Formily'] = window['Formily']
+      ref.current.contentWindow['__DESIGNABLE_SANDBOX_SCOPE__'] = props.scope
+      ref.current.contentWindow['__DESIGNABLE_LAYOUT__'] = layout
+      ref.current.contentWindow['__DESIGNABLE_ENGINE__'] = designer
+      ref.current.contentWindow['__DESIGNABLE_WORKSPACE__'] = workspace
+      ref.current.contentWindow['Formily'] = globalThisPolyfill['Formily']
+      ref.current.contentWindow['Designable'] = globalThisPolyfill['Designable']
       ref.current.contentDocument.open()
       ref.current.contentDocument.write(`
       <!DOCTYPE html>
@@ -76,7 +74,7 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
             overflow-anchor: none;
             user-select:none;
             background-color:${
-              theme === 'light' ? '#fff' : 'transparent'
+              layout.theme === 'light' ? '#fff' : 'transparent'
             } !important;
           }
           html{
@@ -98,15 +96,15 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
   return ref
 }
 
-if (window.frameElement) {
+if (globalThisPolyfill.frameElement) {
   //解决iframe内嵌如果iframe被移除，内部React无法回收内存的问题
-  window.addEventListener('unload', () => {
+  globalThisPolyfill.addEventListener('unload', () => {
     ReactDOM.unmountComponentAtNode(document.getElementById('__SANDBOX_ROOT__'))
   })
 }
 
 export const useSandboxScope = () => {
-  return window['__DESINGER_SANDBOX_SCOPE__']
+  return globalThisPolyfill['__DESIGNABLE_SANDBOX_SCOPE__']
 }
 
 export const renderSandboxContent = (render: (scope?: any) => JSX.Element) => {

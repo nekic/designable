@@ -18,7 +18,10 @@ import {
   SettingsPanel,
   ComponentTreeWidget,
 } from '@designable/react'
-import { SettingsForm } from '@designable/react-settings-form'
+import {
+  SettingsForm,
+  setNpmCDNRegistry,
+} from '@designable/react-settings-form'
 import {
   createDesigner,
   GlobalRegistry,
@@ -63,6 +66,8 @@ import {
   FormGrid,
 } from '../src'
 
+setNpmCDNRegistry('//unpkg.com')
+
 GlobalRegistry.registerDesignerLocales({
   'zh-CN': {
     sources: {
@@ -78,6 +83,14 @@ GlobalRegistry.registerDesignerLocales({
       Layouts: 'Layouts',
       Arrays: 'Arrays',
       Displays: 'Displays',
+    },
+  },
+  'ko-KR': {
+    sources: {
+      Inputs: '입력',
+      Layouts: '레이아웃',
+      Arrays: '배열',
+      Displays: '디스플레이',
     },
   },
 })
@@ -159,7 +172,7 @@ const App = () => {
                 use={['DESIGNABLE', 'JSONTREE', 'MARKUP', 'PREVIEW']}
               />
             </ToolbarPanel>
-            <ViewportPanel>
+            <ViewportPanel style={{ height: '100%' }}>
               <ViewPanel type="DESIGNABLE">
                 {() => (
                   <ComponentTreeWidget

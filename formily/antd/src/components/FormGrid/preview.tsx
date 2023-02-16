@@ -22,15 +22,10 @@ export const FormGrid: DnFC<React.ComponentProps<formilyGrid>> & {
   const node = useTreeNode()
   const nodeId = useNodeIdProps()
   if (node.children.length === 0) return <DroppableWidget {...props} />
-  const totalColumns = node.children.reduce(
-    (buf, child) => buf + (child.props?.['x-component-props']?.gridSpan ?? 1),
-    0
-  )
+
   return (
     <div {...nodeId} className="dn-grid">
-      <FormilyGird {...props} key={totalColumns}>
-        {props.children}
-      </FormilyGird>
+      <FormilyGird {...props}>{props.children}</FormilyGird>
       <LoadTemplate
         actions={[
           {
@@ -53,16 +48,9 @@ export const FormGrid: DnFC<React.ComponentProps<formilyGrid>> & {
   )
 })
 
-FormGrid.GridColumn = observer((props) => {
+FormGrid.GridColumn = observer(({ gridSpan, ...props }) => {
   return (
-    <DroppableWidget
-      {...props}
-      data-span={props.gridSpan}
-      style={{
-        ...props['style'],
-        gridColumnStart: `span ${props.gridSpan || 1}`,
-      }}
-    >
+    <DroppableWidget {...props} data-grid-span={gridSpan}>
       {props.children}
     </DroppableWidget>
   )
@@ -86,6 +74,29 @@ FormGrid.Behavior = createBehavior(
     selector: (node) => node.props['x-component'] === 'FormGrid.GridColumn',
     designerProps: {
       droppable: true,
+      resizable: {
+        width(node) {
+          const span = Number(node.props['x-component-props']?.gridSpan ?? 1)
+          return {
+            plus: () => {
+              if (span + 1 > 12) return
+              node.props['x-component-props'] =
+                node.props['x-component-props'] || {}
+              node.props['x-component-props'].gridSpan = span + 1
+            },
+            minus: () => {
+              if (span - 1 < 1) return
+              node.props['x-component-props'] =
+                node.props['x-component-props'] || {}
+              node.props['x-component-props'].gridSpan = span - 1
+            },
+          }
+        },
+      },
+      resizeXPath: 'x-component-props.gridSpan',
+      resizeStep: 1,
+      resizeMin: 1,
+      resizeMax: 12,
       allowDrop: (node) => node.props['x-component'] === 'FormGrid',
       propsSchema: createFieldSchema(AllSchemas.FormGrid.GridColumn),
     },

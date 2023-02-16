@@ -1,5 +1,185 @@
 # Changelog
 
+## v1.0.0-beta.44(2022-02-16)
+
+### :tada: Enhancements
+
+1. [feat: add hasChildren parameter for DroppableWidget (#219)](https://github.com/alibaba/designable/commit/d04cf3a) :point_right: ( [JuFeng Zhang](https://github.com/JuFeng Zhang) )
+
+1. [feat: add ssr support (#186)](https://github.com/alibaba/designable/commit/6851c71) :point_right: ( [月落音阑](https://github.com/月落音阑) )
+
+1. [feat(core/react/playground): add freelayout feature. add custom source icon feature (#184)](https://github.com/alibaba/designable/commit/171c64f) :point_right: ( [jinphic](https://github.com/jinphic) )
+
+### :beetle: Bug Fixes
+
+1. [fix(react): fix IconWidget side errors(#205)](https://github.com/alibaba/designable/commit/29df2e2) :point_right: ( [yun zhou](https://github.com/yun zhou) )
+
+1. [fix(core): fix web components compatibility in KeyboardDriver (#213)](https://github.com/alibaba/designable/commit/ba7dc10) :point_right: ( [febugcoder](https://github.com/febugcoder) )
+
+1. [fix(core/react): some bug fix about viewport (#198)](https://github.com/alibaba/designable/commit/40abbc2) :point_right: ( [coder-byte](https://github.com/coder-byte) )
+
+1. [fix(playground): fix browser compatibility (#192)](https://github.com/alibaba/designable/commit/57036b9) :point_right: ( [翁立鑫](https://github.com/翁立鑫) )
+
+1. [fix(formily-antd): fix form-grid stuck with repeat key](https://github.com/alibaba/designable/commit/1f9a758) :point_right: ( [yuanxiaoyu](https://github.com/yuanxiaoyu) )
+
+1. [fix(shared/event): fix call subscribeWith infinite recursion (#178)](https://github.com/alibaba/designable/commit/dd06bfa) :point_right: ( [QYW](https://github.com/QYW) )
+
+### :memo: Documents Changes
+
+1. [docs: update package readme](https://github.com/alibaba/designable/commit/118205c) :point_right: ( [Janry](https://github.com/Janry) )
+
+### :blush: Other Changes
+
+1. [chore: reset selected to top tree when redo](https://github.com/alibaba/designable/commit/3b3f5c3) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [chore: update schema configs](https://github.com/alibaba/designable/commit/432a89f) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [chore: add translate example code](https://github.com/alibaba/designable/commit/c45fea6) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.43(2021-12-23)
+
+### :tada: Enhancements
+
+1. [feat(react): add some icons](https://github.com/alibaba/designable/commit/341422b) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.42(2021-12-20)
+
+### :tada: Enhancements
+
+1. [feat: support setNpmCDNRegistry](https://github.com/alibaba/designable/commit/4c38484) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.41(2021-12-16)
+
+### :beetle: Bug Fixes
+
+1. [fix: fix isBehavior](https://github.com/alibaba/designable/commit/fc88f3b) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [fix(formily): set default language (#163)](https://github.com/alibaba/designable/commit/b7668b4) :point_right: ( [Minfee](https://github.com/Minfee) )
+
+1. [fix(react): remove the cleanup of ShadowSVG's effect (#162)](https://github.com/alibaba/designable/commit/b982a2e) :point_right: ( [JuFeng Zhang](https://github.com/JuFeng Zhang) )
+
+## v1.0.0-beta.40(2021-12-08)
+
+### :beetle: Bug Fixes
+
+1. [fix(react): fix NodePathWidget style](https://github.com/alibaba/designable/commit/814e5e6) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [fix(react): fix prettier cdn version](https://github.com/alibaba/designable/commit/e6e0180) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :blush: Other Changes
+
+1. [chore: add sandbox example](https://github.com/alibaba/designable/commit/624076f) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.39(2021-12-06)
+
+### :beetle: Bug Fixes
+
+1. [fix(react): create attach-shadow repeatedly (#161)](https://github.com/alibaba/designable/commit/f8cbc7a) :point_right: ( [WhiteSJ](https://github.com/WhiteSJ) )
+
+## v1.0.0-beta.38(2021-12-03)
+
+### :tada: Enhancements
+
+1. [feat: support resizable to designerProps](https://github.com/alibaba/designable/commit/0215c27) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :beetle: Bug Fixes
+
+1. [fix(react): fix position props in StudioPanel (#155)](https://github.com/alibaba/designable/commit/30aa824) :point_right: ( [vimvinter](https://github.com/vimvinter) )
+
+1. [fix(react): fix component-tree styles](https://github.com/alibaba/designable/commit/a9943dd) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :blush: Other Changes
+
+1. [chore: improve node reisze](https://github.com/alibaba/designable/commit/f71a1f4) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.37(2021-12-01)
+
+### :tada: Enhancements
+
+1. [refactor: remove focusNode feature](https://github.com/alibaba/designable/commit/2d46b94) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [feat(react): add position in layout (#145)](https://github.com/alibaba/designable/commit/baba792) :point_right: ( [programmerwy](https://github.com/programmerwy) )
+
+### :beetle: Bug Fixes
+
+1. [fix(setter): initial bug (#140)](https://github.com/alibaba/designable/commit/4b72dfe) :point_right: ( [Sun HaoWei](https://github.com/Sun HaoWei) )
+
+1. [fix(antd/next): fix locales](https://github.com/alibaba/designable/commit/0bcb178) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :rose: Improve code quality
+
+1. [refactor: remove focusNode feature](https://github.com/alibaba/designable/commit/2d46b94) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :blush: Other Changes
+
+1. [chore: improve code](https://github.com/alibaba/designable/commit/bd28ce6) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [chore(antd/next): update text component output (#147)](https://github.com/alibaba/designable/commit/fa48a6e) :point_right: ( [WhiteSJ](https://github.com/WhiteSJ) )
+
+## v1.0.0-beta.36(2021-11-26)
+
+### :beetle: Bug Fixes
+
+1. [fix(react-settings-form): fix typings](https://github.com/alibaba/designable/commit/2a837fe) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :blush: Other Changes
+
+1. [chore: update formily to 2.0.2](https://github.com/alibaba/designable/commit/89a1725) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.35(2021-11-26)
+
+### :tada: Enhancements
+
+1. [feat(react-settings-form): add exclude inherit in BoxStyleSetter/BoxShadowStyleSetter (#133)](https://github.com/alibaba/designable/commit/d717ebe) :point_right: ( [programmerwy](https://github.com/programmerwy) )
+
+1. [feat(react-settings-form): update sizeinput (#131)](https://github.com/alibaba/designable/commit/a66bace) :point_right: ( [programmerwy](https://github.com/programmerwy) )
+
+1. [feat(language): add Korean translation (#129)](https://github.com/alibaba/designable/commit/9f5cec9) :point_right: ( [2jun0](https://github.com/2jun0) )
+
+### :beetle: Bug Fixes
+
+1. [fix: fix createVoidSchema](https://github.com/alibaba/designable/commit/b3ada9f) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [fix(formily-setters): fix duplicate key warn in ReactionSetter (#132)](https://github.com/alibaba/designable/commit/0f316ea) :point_right: ( [vimvinter](https://github.com/vimvinter) )
+
+### :blush: Other Changes
+
+1. [chore: improve playground code](https://github.com/alibaba/designable/commit/6df7210) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.34(2021-11-13)
+
+### :tada: Enhancements
+
+1. [feat(react): support config css variables](https://github.com/alibaba/designable/commit/e954d86) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :beetle: Bug Fixes
+
+1. [fix(formily): fix reactionSetters and playground](https://github.com/alibaba/designable/commit/87971f4) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+1. [fix(react): fix missing record props in ArrayBase.Item (#125)](https://github.com/alibaba/designable/commit/c041167) :point_right: ( [haloworld](https://github.com/haloworld) )
+
+## v1.0.0-beta.33(2021-11-09)
+
+### :tada: Enhancements
+
+1. [feat(settings-form): add DrawerSetter's trigger props (#122)](https://github.com/alibaba/designable/commit/003de57) :point_right: ( [nekic](https://github.com/nekic) )
+
+1. [feat(formily-setters): add config to DataSourceSetter (#121)](https://github.com/alibaba/designable/commit/6fdf887) :point_right: ( [Sun HaoWei](https://github.com/Sun HaoWei) )
+
+### :beetle: Bug Fixes
+
+1. [fix(settings-form): fix styles](https://github.com/alibaba/designable/commit/6583cf9) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+### :blush: Other Changes
+
+1. [chore(formily-setters): remove ip/qq format](https://github.com/alibaba/designable/commit/460782d) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
+## v1.0.0-beta.32(2021-10-29)
+
+### :tada: Enhancements
+
+1. [feat(core): support fromUser for SelectionEvent](https://github.com/alibaba/designable/commit/c97de88) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
+
 ## v1.0.0-beta.31(2021-10-29)
 
 ### :tada: Enhancements
@@ -185,101 +365,3 @@
 ### :blush: Other Changes
 
 1. [chore(react): update NodePathWidget dependencies](https://github.com/alibaba/designable/commit/87d801e) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v1.0.0-beta.4(2021-09-20)
-
-### :tada: Enhancements
-
-1. [feat: support HistoryPushEvent](https://github.com/alibaba/designable/commit/cfec592) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v1.0.0-beta.3(2021-09-20)
-
-### :blush: Other Changes
-
-1. [chore: support remount engine](https://github.com/alibaba/designable/commit/021668c) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v1.0.0-beta.2(2021-09-20)
-
-### :tada: Enhancements
-
-1. [feat(react): support move StudioPanel to root node](https://github.com/alibaba/designable/commit/9a54259) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-### :beetle: Bug Fixes
-
-1. [chore: fix repository url (#61)](https://github.com/alibaba/designable/commit/d0399b8) :point_right: ( [nnecec](https://github.com/nnecec) )
-
-### :blush: Other Changes
-
-1. [chore: fix repository url (#61)](https://github.com/alibaba/designable/commit/d0399b8) :point_right: ( [nnecec](https://github.com/nnecec) )
-
-1. [chore: update playground](https://github.com/alibaba/designable/commit/8a5b3f7) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v1.0.0-beta.1(2021-09-20)
-
-### :rose: Improve code quality
-
-1. [refactor(react): MainPanel -> StudioPanel](https://github.com/alibaba/designable/commit/74b344f) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-1. [refactor(project): redesign Registry/DragSource (#59)](https://github.com/alibaba/designable/commit/764e7ec) :point_right: ( [Janry](https://github.com/Janry) )
-
-## v0.5.29(2021-09-13)
-
-### :beetle: Bug Fixes
-
-1. [fix: Displaying the default DesignableFiled, all the time when prompted by text does not realise the real component name. (#58)](https://github.com/alibaba/designable/commit/1928f04) :point_right: ( [呆鸡](https://github.com/呆鸡) )
-
-## v0.5.28(2021-09-13)
-
-### :tada: Enhancements
-
-1. [refactor(core): remove sourceName feature](https://github.com/alibaba/designable/commit/78263ec) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-### :rose: Improve code quality
-
-1. [refactor(core): remove sourceName feature](https://github.com/alibaba/designable/commit/78263ec) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.27(2021-08-31)
-
-### :beetle: Bug Fixes
-
-1. [fix(core): fix component/source locale registry](https://github.com/alibaba/designable/commit/0017ac0) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.26(2021-08-31)
-
-### :beetle: Bug Fixes
-
-1. [fix(react): fix can not take component locales](https://github.com/alibaba/designable/commit/cd39398) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.25(2021-08-31)
-
-### :beetle: Bug Fixes
-
-1. [fix(react): use NodeTitleWidget for OutlineWidget](https://github.com/alibaba/designable/commit/9590a2d) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.24(2021-08-31)
-
-### :tada: Enhancements
-
-1. [feat(react): support NodeTitleWidget](https://github.com/alibaba/designable/commit/8242a50) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.23(2021-08-31)
-
-### :tada: Enhancements
-
-1. [feat(core): support createLocales](https://github.com/alibaba/designable/commit/db71be3) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-### :beetle: Bug Fixes
-
-1. [fix(core): remove unused this optional chain (#52)](https://github.com/alibaba/designable/commit/bbafcb8) :point_right: ( [Yanlin Jiang](https://github.com/Yanlin Jiang) )
-
-## v0.5.22(2021-08-30)
-
-### :tada: Enhancements
-
-1. [feat(core): support getDropNodes for designerProps](https://github.com/alibaba/designable/commit/ddd3c95) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )
-
-## v0.5.21(2021-08-29)
-
-### :tada: Enhancements
-
-1. [feat(settings): support CollapseItem](https://github.com/alibaba/designable/commit/de01a25) :point_right: ( [zhili.wzl](https://github.com/zhili.wzl) )

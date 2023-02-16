@@ -4,7 +4,7 @@ import { Workbench } from './Workbench'
 import { Cursor } from './Cursor'
 import { Keyboard } from './Keyboard'
 import { Screen, ScreenType } from './Screen'
-import { Event, uid } from '@designable/shared'
+import { Event, uid, globalThisPolyfill } from '@designable/shared'
 
 /**
  * 设计器引擎
@@ -54,7 +54,7 @@ export class Engine extends Event {
     let results: TreeNode[] = []
     for (let i = 0; i < this.workbench.workspaces.length; i++) {
       const workspace = this.workbench.workspaces[i]
-      results = results.concat(workspace.operation.getSelectedNodes())
+      results = results.concat(workspace.operation.selection.selectedNodes)
     }
     return results
   }
@@ -63,10 +63,10 @@ export class Engine extends Event {
     return TreeNode.findById(id)
   }
 
-  findDraggingNodes(): TreeNode[] {
+  findMovingNodes(): TreeNode[] {
     const results = []
     this.workbench.eachWorkspace((workspace) => {
-      workspace.operation.viewportDragon.dragNodes?.forEach((node) => {
+      workspace.operation.moveHelper.dragNodes?.forEach((node) => {
         if (!results.includes(node)) {
           results.push(node)
         }
@@ -80,7 +80,7 @@ export class Engine extends Event {
   }
 
   mount() {
-    this.attachEvents(window)
+    this.attachEvents(globalThisPolyfill)
   }
 
   unmount() {
@@ -97,8 +97,12 @@ export class Engine extends Event {
     contentEditableAttrName: 'data-content-editable',
     contentEditableNodeIdAttrName: 'data-content-editable-node-id',
     clickStopPropagationAttrName: 'data-click-stop-propagation',
-    nodeHelpersIdAttrName: 'data-designer-node-helpers-id',
+    nodeSelectionIdAttrName: 'data-designer-node-helpers-id',
+    nodeDragHandlerAttrName: 'data-designer-node-drag-handler',
+    screenResizeHandlerAttrName: 'data-designer-screen-resize-handler',
+    nodeResizeHandlerAttrName: 'data-designer-node-resize-handler',
     outlineNodeIdAttrName: 'data-designer-outline-node-id',
+    nodeTranslateAttrName: 'data-designer-node-translate-handler',
     defaultScreenType: ScreenType.PC,
   }
 }

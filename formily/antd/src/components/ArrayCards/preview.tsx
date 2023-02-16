@@ -106,7 +106,7 @@ export const ArrayCards: DnFC<CardProps> = observer((props) => {
     ])
     return (
       <ArrayBase disabled>
-        <ArrayBase.Item index={0}>
+        <ArrayBase.Item index={0} record={null}>
           <Card
             {...props}
             title={
@@ -135,7 +135,7 @@ export const ArrayCards: DnFC<CardProps> = observer((props) => {
                   <TreeNodeWidget key={node.id} node={node} />
                 ))
               ) : (
-                <DroppableWidget />
+                <DroppableWidget hasChildren={false} />
               )}
             </div>
           </Card>
